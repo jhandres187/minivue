@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hola mundo</title>
+</head>
+<body>
+    <!-- <div id="app">
+        <span></span>
+        <br>
+        <input type="text" />
+    </div>
+    <script>
+        const data = {
+            message: 'Hola mundo!',
+        };
+        const span = document.querySelector('span');
+        span.innerHTML = data.message;
+
+        const input = document.querySelector('input');
+        input.value = data.message;
+        input.addEventListener('input', () => {
+            data.message = input.value;
+            span.innerText = data.message;
+        })
+    </script> -->
+    <div id="app">
+        <span p-text="message"></span>
+        <br>
+        <input type="text" p-model="message">
+        <input type="text" p-model="image" />
+        <img p-bind="src:image">
+    </div>
+    <!-- <script src="https://unpkg.com/vue@3"></script> -->
+    <script src="./platzi.js"></script>
+    <script>
+        const { createApp } = Platzi;
+
+        const app = createApp({
+            data() {
+                return {
+                    message: "Hola VUE!",
+                    image: "https://via.placeholder.com/600/771796"
+                }
+            }
+        });
+        app.mount("#app")
+    </script>
+
+    <!-- <div id="app">{{ message }}</div>
+
+    <script>
+    const { createApp } = Vue
+
+    createApp({
+        data() {
+        return {
+            message: 'Hello Vue!'
+        }
+        }
+    }).mount('#app')
+    </script> -->
+</body>
+</html>
